@@ -1,3 +1,6 @@
+/*Write an application that asks the user to enter two integers, obtains them
+from the user and prints their sum, product, difference and quotient (division).*/
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
