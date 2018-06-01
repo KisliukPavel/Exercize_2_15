@@ -23,4 +23,5 @@ public class Exercize_2_15 extends Application {
 		primaryStage.setScene(s);
 		primaryStage.show();
 	}
+
 }

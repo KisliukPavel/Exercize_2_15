@@ -42,26 +42,13 @@ public class Exercize_2_15Controller {
 		}
 		else {
 			incorrect_Input_Label.setVisible(false);
-			Integer sum = Integer.valueOf(number1_Text_Field.getText()) + Integer.valueOf(number2_Text_FIeld.getText());
-			//------------------------------------------------
-			text_Field_Sum.setText(sum.toString());
-			Integer difference = Integer.valueOf(number1_Text_Field.getText()) - Integer.valueOf(number2_Text_FIeld.getText());
-			text_Field_Difference.setText(difference.toString());
-			//------------------------------------------------
-			Integer product = Integer.valueOf(number1_Text_Field.getText()) * Integer.valueOf(number2_Text_FIeld.getText());
-			text_Field_Product.setText(product.toString());
-			//------------------------------------------------
-			try {
-				Double quotient = Double.valueOf(number1_Text_Field.getText()) / Double.valueOf(number2_Text_FIeld.getText());
-				text_Field_Quotient.setText(quotient.toString());
-			}catch (ArithmeticException ex) {
-				text_Field_Quotient.setText("NaN");
-			}
-			//------------------------------------------------
 			new Thread() {
 				public void run() {
 					//----------------------------------
 					load_Image.setVisible(true);
+					number1_Text_Field.setDisable(true);
+					number2_Text_FIeld.setDisable(true);
+					start_Button.setDisable(true);
 					//----------------------------------
 					try {
 						Thread.sleep(2000);
@@ -70,12 +57,33 @@ public class Exercize_2_15Controller {
 					}
 					//----------------------------------
 					load_Image.setVisible(false);
-
+					number1_Text_Field.setDisable(false);
+					number2_Text_FIeld.setDisable(false);
+					start_Button.setDisable(false);
+					//----------------------------------
+					Integer sum = Integer.valueOf(number1_Text_Field.getText()) + Integer.valueOf(number2_Text_FIeld.getText());
+					text_Field_Sum.setText(sum.toString());
+					//------------------------------------------------
+					Integer difference = Integer.valueOf(number1_Text_Field.getText()) - Integer.valueOf(number2_Text_FIeld.getText());
+					text_Field_Difference.setText(difference.toString());
+					//------------------------------------------------
+					Integer product = Integer.valueOf(number1_Text_Field.getText()) * Integer.valueOf(number2_Text_FIeld.getText());
+					text_Field_Product.setText(product.toString());
+					//------------------------------------------------
+					if(0 == Double.valueOf(number2_Text_FIeld.getText())){
+						text_Field_Quotient.setText("I");
+					}
+					else{
+						Double quotient = Double.valueOf(number1_Text_Field.getText()) / Double.valueOf(number2_Text_FIeld.getText());
+						text_Field_Quotient.setText(quotient.toString());
+					}
+					//------------------------------------------------
 				}
 
 			}.start();
 		}
 	}
+
 
 	boolean check_Input(String text_Field1, String text_Field2)
 	{

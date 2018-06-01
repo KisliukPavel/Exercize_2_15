@@ -47,7 +47,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="text_Field_Sum" alignment="CENTER" editable="false" layoutX="20.0" layoutY="128.0" prefHeight="37.0" prefWidth="64.0">
+      <TextField fx:id="text_Field_Sum" alignment="CENTER" disable="true" editable="false" layoutX="20.0" layoutY="128.0" prefHeight="37.0" prefWidth="64.0">
          <font>
             <Font size="16.0" />
          </font>
