@@ -37,6 +37,7 @@ public class Exercize_2_15Controller {
 
 	@FXML
 	void start_Button_Pressed(ActionEvent event) {
+		//----------------------------------clean & disable fields
 		text_Field_Sum.setDisable(true);
 		text_Field_Sum.setText("");
 		text_Field_Difference.setDisable(true);
@@ -45,9 +46,12 @@ public class Exercize_2_15Controller {
 		text_Field_Product.setText("");
 		text_Field_Quotient.setDisable(true);
 		text_Field_Quotient.setText("");
+		//----------------------------------
+		//----------------------------------check input (only integers)
 		if (!check_Input((number1_Text_Field.getText()), (number2_Text_FIeld.getText()))) {
 			incorrect_Input_Label.setVisible(true);
 		}
+		//----------------------------------
 		else {
 			incorrect_Input_Label.setVisible(false);
 			new Thread() {
@@ -57,7 +61,7 @@ public class Exercize_2_15Controller {
 					number1_Text_Field.setDisable(true);
 					number2_Text_FIeld.setDisable(true);
 					start_Button.setDisable(true);
-					//----------------------------------
+					//----------------------------------loading imitation
 					try {
 						Thread.sleep(2000);
 					} catch (InterruptedException ex) {
@@ -69,6 +73,7 @@ public class Exercize_2_15Controller {
 					number2_Text_FIeld.setDisable(false);
 					start_Button.setDisable(false);
 					//----------------------------------
+					//------------------------------------------------compute & output yilds
 					Integer sum = Integer.valueOf(number1_Text_Field.getText()) + Integer.valueOf(number2_Text_FIeld.getText());
 					text_Field_Sum.setText(sum.toString());
 					//------------------------------------------------
@@ -77,7 +82,7 @@ public class Exercize_2_15Controller {
 					//------------------------------------------------
 					Integer product = Integer.valueOf(number1_Text_Field.getText()) * Integer.valueOf(number2_Text_FIeld.getText());
 					text_Field_Product.setText(product.toString());
-					//------------------------------------------------
+					//------------------------------------------------check division by 0
 					if(0 == Double.valueOf(number2_Text_FIeld.getText())){
 						text_Field_Quotient.setText("I");
 					}
