@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="423.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Exercize_2_15Controller">
    <children>
       <Button fx:id="start_Button" layoutX="84.0" layoutY="312.0" mnemonicParsing="false" onAction="#start_Button_Pressed" prefHeight="45.0" prefWidth="72.0" text="Start">
@@ -73,7 +72,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ImageView fx:id="load_Image" fitHeight="37.0" fitWidth="40.0" layoutX="102.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="load_Image" fitHeight="37.0" fitWidth="40.0" layoutX="102.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
             <Image url="@Computer_Think.gif" />
          </image>

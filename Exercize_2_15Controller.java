@@ -52,7 +52,7 @@ public class Exercize_2_15Controller {
 			text_Field_Product.setText(product.toString());
 			//------------------------------------------------
 			try {
-				Integer quotient = Integer.valueOf(number1_Text_Field.getText()) / Integer.valueOf(number2_Text_FIeld.getText());
+				Double quotient = Double.valueOf(number1_Text_Field.getText()) / Double.valueOf(number2_Text_FIeld.getText());
 				text_Field_Quotient.setText(quotient.toString());
 			}catch (ArithmeticException ex) {
 				text_Field_Quotient.setText("NaN");
