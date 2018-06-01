@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="423.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Exercize_2_15Controller">
+   <children>
+      <Button fx:id="start_Button" layoutX="84.0" layoutY="312.0" mnemonicParsing="false" onAction="#start_Button_Pressed" prefHeight="45.0" prefWidth="72.0" text="Start">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="16.0" layoutY="22.0" text="Number 1">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="54.0" text="Number 2">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="38.0" layoutY="108.0" text="Sum">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="number1_Text_Field" layoutX="89.0" layoutY="23.0" nodeOrientation="RIGHT_TO_LEFT" />
+      <TextField fx:id="number2_Text_FIeld" layoutX="89.0" layoutY="55.0" nodeOrientation="RIGHT_TO_LEFT" />
+      <Label layoutX="172.0" layoutY="108.0" text="Product">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="182.0" text="Difference">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="169.0" layoutY="182.0" text="Quotient">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="text_Field_Sum" alignment="CENTER" editable="false" layoutX="20.0" layoutY="128.0" prefHeight="37.0" prefWidth="64.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_Field_Product" alignment="CENTER" editable="false" layoutX="164.0" layoutY="128.0" prefHeight="37.0" prefWidth="64.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_Field_Difference" alignment="CENTER" editable="false" layoutX="20.0" layoutY="209.0" prefHeight="37.0" prefWidth="64.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="text_Field_Quotient" alignment="CENTER" editable="false" layoutX="164.0" layoutY="209.0" prefHeight="37.0" prefWidth="64.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label fx:id="incorrect_Input_Label" layoutX="75.0" layoutY="268.0" text="Incorrect input" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="load_Image" fitHeight="37.0" fitWidth="40.0" layoutX="102.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Computer_Think.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="75.0" layoutY="92.0" text="At more 2 symbols" />
+   </children>
+</AnchorPane>
