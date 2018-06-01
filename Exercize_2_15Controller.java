@@ -37,6 +37,14 @@ public class Exercize_2_15Controller {
 
 	@FXML
 	void start_Button_Pressed(ActionEvent event) {
+		text_Field_Sum.setDisable(true);
+		text_Field_Sum.setText("");
+		text_Field_Difference.setDisable(true);
+		text_Field_Difference.setText("");
+		text_Field_Product.setDisable(true);
+		text_Field_Product.setText("");
+		text_Field_Quotient.setDisable(true);
+		text_Field_Quotient.setText("");
 		if (!check_Input((number1_Text_Field.getText()), (number2_Text_FIeld.getText()))) {
 			incorrect_Input_Label.setVisible(true);
 		}
@@ -75,9 +83,17 @@ public class Exercize_2_15Controller {
 					}
 					else{
 						Double quotient = Double.valueOf(number1_Text_Field.getText()) / Double.valueOf(number2_Text_FIeld.getText());
-						text_Field_Quotient.setText(quotient.toString());
+						String S = new String();
+						S = quotient.toString();
+						String S2 = new String();
+						S2 = S.substring(0, 5);
+						text_Field_Quotient.setText(S2);
 					}
 					//------------------------------------------------
+					text_Field_Sum.setDisable(false);
+					text_Field_Difference.setDisable(false);
+					text_Field_Product.setDisable(false);
+					text_Field_Quotient.setDisable(false);
 				}
 
 			}.start();
