@@ -88,11 +88,7 @@ public class Exercize_2_15Controller {
 					}
 					else{
 						Double quotient = Double.valueOf(number1_Text_Field.getText()) / Double.valueOf(number2_Text_FIeld.getText());
-						String S = new String();
-						S = quotient.toString();
-						String S2 = new String();
-						S2 = S.substring(0, S.length());
-						text_Field_Quotient.setText(S2);
+						text_Field_Quotient.setText(String.format("%.2f", quotient));
 					}
 					//------------------------------------------------
 					text_Field_Sum.setDisable(false);
