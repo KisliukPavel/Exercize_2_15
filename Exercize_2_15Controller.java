@@ -91,7 +91,7 @@ public class Exercize_2_15Controller {
 						String S = new String();
 						S = quotient.toString();
 						String S2 = new String();
-						S2 = S.substring(0, 5);
+						S2 = S.substring(0, S.length());
 						text_Field_Quotient.setText(S2);
 					}
 					//------------------------------------------------
@@ -110,8 +110,16 @@ public class Exercize_2_15Controller {
 	{
 		if((text_Field1.length() > 2) || (0 == text_Field1.length())) return false;
 		if((text_Field2.length() > 2) || (0 == text_Field2.length())) return false;
-		if((!(Character.isDigit(text_Field1.charAt(0)))) && !(Character.isDigit(text_Field1.charAt(1)))) return false;
-		if((!(Character.isDigit(text_Field2.charAt(0)))) && !(Character.isDigit(text_Field2.charAt(1)))) return false;
+		for(int i = 0; i < text_Field1.length(); i++) {
+			if(!(Character.isDigit(text_Field1.charAt(i)))) {
+				return false;
+			}
+		}
+		for(int i = 0; i < text_Field2.length(); i++) {
+			if(!(Character.isDigit(text_Field2.charAt(i)))) {
+				return false;
+			}
+		}
 		return true;
 	}
 
